@@ -26,7 +26,7 @@ for i in range(1, 6):
         Playerhealth = Playerhealth - Enemyattack
         Enemyhealth = Enemyhealth - Playerattack
         Playerchoice = input('What are you going to do? 1 to attack, 2 to heal.')
-        if Playerchoice == '1' and Enemychoice == '3':
+        if Playerchoice == '1' and Enemychoice == 3:
             if Enemymiss < 70 and Playermiss >= 70:
                 print('You attacked the Enemy, HP left: ' + str(Enemyhealth))
                 Playerhealth = Playerhealth + Enemyattack
@@ -49,7 +49,7 @@ for i in range(1, 6):
                 print('You attacked the Enemy, Enemy HP left: ' + str(Enemyhealth))
                 print('-----------------------------------------------')
             time.sleep(2.5)
-        if Playerchoice == '1' and Enemychoice == '4':
+        if Playerchoice == '1' and Enemychoice == 4:
             if Playermiss >= 70:
                 print('You attacked the Enemy, HP left: ' + str(Enemyhealth))
                 Playerhealth = Playerhealth + Enemyattack
@@ -64,7 +64,7 @@ for i in range(1, 6):
                 print('You missed the Enemy, Enemy HP left: ' + str(Enemyhealth))
                 print('-----------------------------------------------')
             time.sleep(2.5)
-        if Playerchoice == '2' and Enemychoice == '4':
+        if Playerchoice == '2' and Enemychoice == 4:
             Playerhealth = Playerhealth + Playerheal
             print('You healed, Player (You) HP left: ' + str(Playerhealth))
             Playerhealth = Playerhealth + Enemyattack
@@ -73,7 +73,7 @@ for i in range(1, 6):
             print('-----------------------------------------------')
             # Playerhealth is an interger, so we use str(...) to concatenate with strings
             time.sleep(2.5)
-        if Playerchoice == '2' and Enemychoice == '3':
+        if Playerchoice == '2' and Enemychoice == 3:
             if Enemymiss < 70:
                 Playerhealth = Playerhealth + Playerheal
                 print('You healed, Player (You) HP left: ' + str(Playerhealth))
