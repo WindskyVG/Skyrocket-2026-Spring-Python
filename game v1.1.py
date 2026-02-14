@@ -1,6 +1,5 @@
 
 import time
-
 print("If you want unlimited strength and energy, you must claim the Power Stone.")
 time.sleep(2)
 
