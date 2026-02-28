@@ -33,7 +33,7 @@ def main():
            )
 
            # Display response
-           print(f"\n🤖 Bot: {response.text}")
+           print(f"\n🤖 Bob the Bot: {response.text}")
 
        except Exception as e:
            print(f"❌ Error: {e}")
