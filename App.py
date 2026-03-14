@@ -6,7 +6,7 @@ N = 5
 
 def main():
     # Initialize Cohere client
-    co = cohere.Client('dq3YZTeLugYIRR8YdrYVNS9D06mHTb9FdxFatBmd')
+    co = cohere.Client('COHERE API KEY')
 
     print("🤖 Cohere Chatbot - Terminal Version")
     print("Type 'quit', 'exit', or 'bye' to end the conversation")
