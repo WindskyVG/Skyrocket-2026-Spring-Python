@@ -3,7 +3,7 @@ import cohere
 
 def main():
    # Initialize Cohere client
-   co = cohere.Client('aDiCo9ONmUp6RHnCF6Mp1YRN9yxBBDXd5ScmQPLy')
+   co = cohere.Client('API')
 
    print("🤖 Cohere Chatbot - Terminal Version")
    print("Type 'quit', 'exit', or 'bye' to end the conversation")
