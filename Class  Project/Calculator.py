@@ -1,19 +1,12 @@
 #Calculator
 import time
 
+history = []
 print("The math operations are +, -, * (times), / (divide/fractions), and %. \n type q to quit and history to show history.")
 
 while True:
     User_input = input("Enter your math equation (or something else): ") #6/3
     Math_operations = ['+', '-', '*', '/', '%']
-
-    if User_input.lower() == 'history':
-        print(User_input + '=' + str(answer))
-    elif User_input.lower() == 'q' or User_input.lower() == 'quit':
-        print("loading...")
-        time.sleep(2)
-        print("Bye bye")
-        break
 
     op = None
     for o in Math_operations:
@@ -22,14 +15,14 @@ while True:
             break
             #The o is only a string from one of the operations from Math_operations
     parts = User_input.split(op)  # ex. ["2", "3"]
-    if User_input.lower() == 'history':
-        if answer == int(answer):
-            answer = int(answer)
-            print(User_input + '=' + str(answer))
 
-        else:
-            print(User_input + '=' + str(answer))
-    else:
+    if User_input.lower() == 'q' or User_input.lower() == 'quit':
+        print("loading...")
+        time.sleep(2)
+        print("Bye bye")
+        break
+
+    elif User_input != 'history':#the '!' is equal to not
         num1 = float(parts[0].strip())
         num2 = float(parts[1].strip())
 
@@ -51,6 +44,13 @@ while True:
 
     if answer == int(answer):
         print(int(answer))
-    else:
+    elif answer == float(answer):
         print(answer)
+
+    history.append(User_input + ' = ' + str(answer))
+    if User_input == 'history':
+        print("-----------History------------")
+        print("Please ignore the last statement of your history.")
+        for item in history:
+            print(item)
 
