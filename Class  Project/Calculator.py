@@ -2,31 +2,19 @@
 import time
 history = []
 print("The math operations are +, -, * (times), / (divide/fractions), and %. \n type q to quit and history to show history. All other things do not work.")
-print("these are the games: \ntype 'Odd or Even Game' to play. \ntype 'Guess The Number' to play. \ntype 'Passwork check' to play. \ntype 'Guess The Number 2' to play.")
 User_input = input("Enter your math equation (or something else): ")  # 6/3
-
-if User_input == 'Odd or Even Game':
-    while True:
-        print("type 'quit game' to exit game.")
-        OoEG = input("print in a number. I will determine if it is odd or even.")
-        number = (OoEG/2)
-        if OoEG.lower() == 'quit game':
-            print("Bye bye")
-            break
-        elif (OoEG/2) == int(number):
-            print("the number" + str(OoEG) + "is even.")
-        else:
-            print("the number" + str(OoEG) + "is odd.")
 while True:
     Math_operations = ['+', '-', '*', '/', '%']
-    other_random_stuff = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','!','@','#','$','','^','&','(',')',',','<','.','>','?','"',"'",';',':','=','[',']','{','}','|','`','~']
+    other_random_stuff = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+                          't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '', '^', '&', '(', ')', ',', '<', '.',
+                          '>', '?', '"', "'", ';', ':', '=', '[', ']', '{', '}', '|', '`', '~']
 
     op = None
     for o in Math_operations:
         if o in User_input:
             op = o
             break
-            #The o is only a string from one of the operations from Math_operations
+            # The o is only a string from one of the operations from Math_operations
     parts = User_input.split(op)  # ex. ["2", "3"]
 
     if User_input.lower() == 'q' or User_input.lower() == 'quit':
@@ -37,7 +25,7 @@ while True:
     elif User_input.lower() == 'history' and User_input == other_random_stuff:
         print("Sorry that is not available yet or a valid answer.")
         print("--------------------------------------------------")
-    elif User_input.lower() != 'history' and User_input != other_random_stuff:#the '!' is equal to not
+    elif User_input.lower() != 'history' and User_input != other_random_stuff:  # the '!' is equal to not
         num1 = float(parts[0].strip())
         num2 = float(parts[1].strip())
 
@@ -73,5 +61,4 @@ while True:
         print("Please ignore the last statement of your history.")
         for item in history:
             print(item)
-        print("------------------------------")
-
+        print("----------------------------")

@@ -1,14 +1,15 @@
 import time
 import random
+
+from fsspec.asyn import reset_lock
+
 Wins = 0
 Loses = 0
 Draws = 0
 print("type q or quit to quit.\ntype Results to see how many wins you have.")
 while True:
-    rock = 1
-    paper = 2
-    scissors = 3
-    Computer = random.randint(1,3)
+    Computer = random.randint(1, 3)
+    #rock = 1, paper = 2, scissors = 3
     User_input = input("type rock, paper, or scissors: ")
     if User_input.lower() == "results" or User_input.lower() == "result" or User_input.lower() == "r":
         print("Here are your results: ")
@@ -28,32 +29,57 @@ while True:
         time.sleep(1)
         break
     elif User_input.lower() == "rock":
-        if Computer == rock:
+        if Computer == 1:
+            print("-------------------------------")
+            print("Computer choose rock")
             print("draw.")
+            print("--------------------")
             Draws += 1
-        elif Computer == paper:
+        elif Computer == 2:
+            print("----------------------------")
+            print("Computer choose paper")
             print("You lose.")
+            print("---------------------------")
             Loses += 1
         else:
+            print("-------------------------------------")
+            print("Computer choose scissors")
             print("You win!")
             Wins += 1
     elif User_input.lower() == "paper":
-        if Computer == rock:
+        if Computer == 1:
+            print("--------------------")
+            print("Computer choose rock")
             print("You win!")
+            print("---------------------")
             Wins += 1
-        if Computer == paper:
+        elif Computer == 2:
+            print("--------------------")
+            print("Computer choose paper")
             print("draw.")
+            print("--------------------")
             Draws += 1
         else:
+            print("--------------------")
+            print("Computer choose scissors")
             print("You lose.")
+            print("---------------------")
             Loses += 1
     else:
-        if Computer == rock:
+        if Computer == 1:
+            print("--------------------")
+            print("Computer choose rock")
             print("You lose!")
+            print("---------------------")
             Loses += 1
-        elif Computer == paper:
+        elif Computer == 2:
+            print("--------------------")
+            print("Computer choose paper")
             print("You win!")
             Wins += 1
         else:
+            print("--------------------")
+            print("Computer choose scissors")
             print("draw.")
+            print("---------------------")
             Draws += 1
