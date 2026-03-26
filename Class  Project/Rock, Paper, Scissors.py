@@ -1,7 +1,7 @@
 import time
 import random
 
-from fsspec.asyn import reset_lock
+#add 3 more new stuff
 
 Wins = 0
 Loses = 0
