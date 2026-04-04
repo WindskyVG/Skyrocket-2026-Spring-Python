@@ -1,5 +1,6 @@
-grades = [100, 68, 93, 48, 58, 100, 96, 87, 79, 80, 90, 99, 100, 91]
-
+grades = []
+for j in range(10):
+    grades.append(int(input("Enter grades: ")))
 grademax = 0
 grademin = 1000
 gradesum = 0
@@ -14,7 +15,7 @@ for i in grades:
         gradefails += 1
 gradeaverage = gradesum / len(grades)
 
-print("The average grade is ", gradeaverage)
+print("The average grade is ", int(gradeaverage))
 print("The maximum grade is ", grademax)
 print("The minimum grade is ", grademin)
 print("The grade sum is ", gradesum)
