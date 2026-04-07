@@ -6,3 +6,4 @@ while True:
             Factors.append(i)
     print("Here are the Factors: ")
     print(Factors)
+    Factors = []
