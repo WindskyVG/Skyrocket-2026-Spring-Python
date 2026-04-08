@@ -29,6 +29,11 @@ while True:
             print("Wrong!")
             time.sleep(1)
             print("But since it wasn't in the choices, I won't count that!")
+        elif q1.lower() == "r" or q1.lower() == "results":
+            print("Here are your results from all total games: \n--------------------\nYou got " + str(player_correct_answers) + " correct!\nYou got " + str(player_incorrect_answers) + " incorrect!\n----------------------\nLet's play again!")
+        else:
+            print("Sorry, something went wrong!")
+        time.sleep(1)
         q2 = input("Next question!\nWhat is the maximum speed that a fox can run up to?\nA. 1 mile per hour\nB. 16 miles per hour\nC. 48 miles per hour\nD. 30 miles per hour\nE. None of the above\n---------------\nEnter the your choice: ")
         if q2.lower() == "a":
             print("Wrong!")
