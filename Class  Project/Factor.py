@@ -1,6 +1,9 @@
+import time
 Factors = []
 while True:
     Number = int(input("Enter a number to factor: "))
+    print("Please wait...")
+    time.sleep(3)
     for i in range(1, (Number + 1)):
         if Number % i == 0:
             Factors.append(i)
