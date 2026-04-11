@@ -17,17 +17,19 @@ while True:
             # The o is only a string from one of the operations from Math_operations
     parts = User_input.split(op)  # ex. ["2", "3"]
 
-    if User_input.lower() == 'q' or User_input.lower() == 'quit':
+    if User_input.lower() != 'history' and User_input != other_random_stuff:  # the '!' is equal to not
+        num1 = float(parts[0].strip())
+        num2 = float(parts[1].strip())
+    elif User_input.lower() == 'history' and User_input == other_random_stuff:
+        print("Sorry that is not available yet or a valid answer.")
+        print("--------------------------------------------------")
+    elif User_input.lower() == 'q' or User_input.lower() == 'quit':
         print("loading...")
         time.sleep(2)
         print("Bye bye")
         break
-    elif User_input.lower() == 'history' and User_input == other_random_stuff:
+    else:
         print("Sorry that is not available yet or a valid answer.")
-        print("--------------------------------------------------")
-    elif User_input.lower() != 'history' and User_input != other_random_stuff:  # the '!' is equal to not
-        num1 = float(parts[0].strip())
-        num2 = float(parts[1].strip())
 
     if op == '%':
         print("The answer is: ")
