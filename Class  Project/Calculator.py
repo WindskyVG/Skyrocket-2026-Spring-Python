@@ -2,8 +2,8 @@
 import time
 history = []
 print("The math operations are +, -, * (times), / (divide/fractions), and %. \n type q to quit and history to show history. All other things do not work.")
-User_input = input("Enter your math equation (or something else): ")  # 6/3
 while True:
+    User_input = input("Enter your math equation (or something else): ")  # 6/3
     Math_operations = ['+', '-', '*', '/', '%']
     other_random_stuff = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
                           't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '', '^', '&', '(', ')', ',', '<', '.',
