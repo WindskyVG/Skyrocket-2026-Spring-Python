@@ -5,4 +5,4 @@ people_amount = input("How many people is here: ")
 tip_each_person_amount = ((tip_percent)/100 * money_paid)
 tip_amount = tip_each_person_amount * int(people_amount)
 total_money = money_paid + tip_amount
-print("-----------------\nSubtotal: $" + str(money_paid) + "\nTip: $" + str(tip_amount) + "\nTips each person: $" + str(tip_each_person_amount) + "Total per person: $" + str(total_money/2) + "\n---------------\nTotal: $" + str(total_money) + "\n-----------------\nThank you for visiting Sophia's Shop For Nothing!\nHave a good day!")
+print("-----------------\nSubtotal: $" + str(money_paid) + "\nTip: $" + str(tip_amount) + "\nTips each person: $" + str(tip_each_person_amount) + "\nTotal per person: $" + str(total_money/2) + "\n---------------\nTotal: $" + str(total_money) + "\n-----------------\nThank you for visiting Sophia's Shop For Nothing!\nHave a good day!")
