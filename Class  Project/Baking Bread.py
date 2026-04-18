@@ -10,7 +10,7 @@ time.sleep(1)
 bread_weight = float(input("How many ounces would you like 1 bread to be: "))
 serving_size = float(input("How many ounces would you like 1 serving to be: "))
 guest_num = int(input("How many people would be in your party: "))
-bread_num = (guest_num*serving_size)/bread_weight
+bread_num = ((guest_num*serving_size)/bread_weight)
 
 teaspoon_instant_yeast = (teaspoon_instant_yeast*bread_num)
 teaspoon_salt = (teaspoon_salt*bread_num)
