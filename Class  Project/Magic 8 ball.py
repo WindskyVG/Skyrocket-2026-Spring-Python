@@ -1,28 +1,4 @@
-def hello():
-    # Prints three greetings
-    print('Good morning!')
-    print('Good afternoon!')
-    print('Good evening!')
-
-hello()
-hello()
-print('ONE MORE TIME!')
-hello()
-
-print("----------------------------")
-
-def say_hello_to(name):
-    # Prints three greetings to the name provided
-    print('Good morning, ' + name)
-    print('Good afternoon, ' + name)
-    print('Good evening, ' + name)
-
-say_hello_to('Sophia')
-say_hello_to('Alice')
-say_hello_to('Bob')
-
 import random
-
 def get_answer(answer_number):
     # Returns a fortune answer based on what int answer_number is, 1 to 9
     if answer_number == 1:
