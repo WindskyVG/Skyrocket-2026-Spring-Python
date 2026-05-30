@@ -36,6 +36,29 @@ player_sleep_bar = 100
 hunger_bar_max = 200
 happy_bar_max = 200
 Health_bar = 100
+def random_event():
+
+    chance = random.randint(1, 100)
+
+    if chance <= 30:
+
+        events = [
+        "Your fox got hurt by a bader!",
+        "Your fox got sick",
+        "You found money",
+        "lost wallet",
+        "Your fox got hurt by a dog",
+        "You forgot to buy food for your fox!",
+        "No event happened"
+        ]
+
+        event = random.choice(events)
+
+        print("\nRandom Event:")
+
+        if event == "Your fox got hurt by a badger":
+            badger_damage = random.randint(1, 100)
+
 def stats():
     print("""==================================
           Your Fox's Stats:
@@ -65,6 +88,7 @@ for day_num in range(age_max):
         print("You have to go to work today, and didn't have a whole day to take care of you fox.")
         time.sleep(1.5)
     if day_num == 1:
+
         print("You just woke up and saw " + fox_name + "staring at you.\nYou just remembered that you got a pet fox!")
         time.sleep(1)
         workday()
